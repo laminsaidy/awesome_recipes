@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-_x7fup+=x5z%4ob5dw0av99wo7(54ft2mftzrkp15^c=d=!=13
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1',]
+ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1', 'localhost',]
 
 
 # Application definition
@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     #My local apps
     'recipes',
     'home',
-    'users',
-    
+    'users',    
 ]
 
 MIDDLEWARE = [
