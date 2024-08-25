@@ -29,6 +29,9 @@ urlpatterns = [
     path('', include('recipes.urls')),
     path('register/', user_views.register, name="user-register"),
     path('login/', auth_Views.LoginView.as_view(template_name='users/login.html'), name="user-login"),
+    path('logout/', auth_Views.LogoutView.as_view(template_name='users/logout.html'), name="user-logout"),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),
+    path('profile/', user_views.profile, name="user-profile"),
+
     
 ]
