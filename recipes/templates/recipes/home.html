@@ -2,6 +2,13 @@
 <!---->
 {% block content %}
 <h1>Recipes App Home</h1>
+{% if user.is_authenticated %}
+Hi {{ user.username }}!
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Log Out</button>
+</form>
+{% endif %}
 {% for recipe in recipes %}
 <div class="card my-2" style="width: 18rem;">
     <div class="card-body">
